@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TsBlog.Repository", "src\Li
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TsBlog.Frontend", "src\Persentation\TsBlog.Frontend\TsBlog.Frontend.csproj", "{174BC52E-AE38-46B6-8012-EB70BD262C2D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Persentation", "1.Persentation", "{FA8E85B0-9A67-4C64-B336-7DAD8D6833D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Libraries", "2.Libraries", "{EC3F3ECF-1C39-46B1-9379-13CE519A2BE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +34,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FC85E324-AA15-4751-9150-0827093022C2} = {EC3F3ECF-1C39-46B1-9379-13CE519A2BE9}
+		{181195A7-4E52-4F50-BF17-40ABDCD2A51A} = {EC3F3ECF-1C39-46B1-9379-13CE519A2BE9}
+		{174BC52E-AE38-46B6-8012-EB70BD262C2D} = {FA8E85B0-9A67-4C64-B336-7DAD8D6833D0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C238B374-A804-4D90-9C62-E56EC977BA8B}
