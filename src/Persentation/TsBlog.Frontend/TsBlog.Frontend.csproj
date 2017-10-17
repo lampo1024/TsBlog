@@ -15,7 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TsBlog.Repository\TsBlog.Repository.csproj" />
+    <ProjectReference Include="..\..\Libraries\TsBlog.Domain\TsBlog.Domain.csproj" />
+    <ProjectReference Include="..\..\Libraries\TsBlog.Repository\TsBlog.Repository.csproj" />
   </ItemGroup>
 
 </Project>
