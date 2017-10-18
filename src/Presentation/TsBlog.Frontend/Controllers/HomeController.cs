@@ -1,5 +1,8 @@
-﻿using System.Web.Mvc;
-using TsBlog.Repositories;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 
 namespace TsBlog.Frontend.Controllers
 {
@@ -7,8 +10,7 @@ namespace TsBlog.Frontend.Controllers
     {
         public ActionResult Index()
         {
-            var post = new PostRepository().Read();
-            return View(post);
+            return View();
         }
 
         public ActionResult About()
