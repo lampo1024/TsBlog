@@ -1,7 +1,7 @@
 ﻿using SqlSugar;
 using TsBlog.Domain;
 
-namespace TsBlog.Repository
+namespace TsBlog.Repositories
 {
 
     public class DbConnectionFactory

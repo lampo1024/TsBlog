@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EB782ADD-2AFA-4779-8E45-9AECA852B713}</ProjectGuid>
+    <ProjectGuid>{447D0FD4-9ABA-42CE-8CA1-C819C3DB6241}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TsBlog.Domain</RootNamespace>
-    <AssemblyName>TsBlog.Domain</AssemblyName>
+    <RootNamespace>TsBlog.Repositories</RootNamespace>
+    <AssemblyName>TsBlog.Repositories</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,8 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Post.cs" />
+    <Compile Include="PostRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TsBlog.Domain\TsBlog.Domain.csproj">
+      <Project>{eb782add-2afa-4779-8e45-9aeca852b713}</Project>
+      <Name>TsBlog.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
