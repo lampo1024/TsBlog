@@ -2,6 +2,9 @@
 
 namespace TsBlog.Domain.Entities
 {
+    /// <summary>
+    /// 博文实体类
+    /// </summary>
     public class Post
     {
         /// <summary>

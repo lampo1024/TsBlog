@@ -140,6 +140,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Views\Home\Post.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\TsBlog.Domain\TsBlog.Domain.csproj">
+      <Project>{E415AB82-2704-4984-9576-A9BC8F3DED30}</Project>
+      <Name>TsBlog.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\TsBlog.Repositories\TsBlog.Repositories.csproj">
+      <Project>{0B3D004F-250E-439F-B0AB-9268C33D3DEB}</Project>
+      <Name>TsBlog.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
