@@ -1,15 +1,18 @@
-﻿using System;
+﻿using SqlSugar;
+using System;
 
 namespace TsBlog.Domain.Entities
 {
     /// <summary>
     /// 博文实体类
     /// </summary>
+    [SugarTable("tb_post")]
     public class Post
     {
         /// <summary>
         /// ID
         /// </summary>
+        [SugarColumn(IsIdentity = true, IsPrimaryKey = true)]
         public int Id { get; set; }
         /// <summary>
         /// 标题

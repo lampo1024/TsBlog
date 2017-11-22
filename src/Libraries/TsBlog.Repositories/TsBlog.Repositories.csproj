@@ -33,6 +33,12 @@
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="MySqlSugar, Version=3.5.3.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\mySqlSugar.3.5.3.4\lib\net40\MySqlSugar.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlSugar, Version=4.6.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\sqlSugar.4.6.0.6\lib\SqlSugar.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -44,7 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config.cs" />
     <Compile Include="DataConverter.cs" />
+    <Compile Include="DbFactory.cs" />
     <Compile Include="MySqlHelper.cs" />
     <Compile Include="PostRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -58,6 +66,10 @@
       <Project>{e415ab82-2704-4984-9576-a9bc8f3ded30}</Project>
       <Name>TsBlog.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\MySql.Data.dll" />
+    <Content Include="lib\MySqlSugar.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
