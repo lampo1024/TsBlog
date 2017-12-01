@@ -45,11 +45,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\Libraries\TsBlog.Domain\TsBlog.Domain.csproj">
+    <ProjectReference Include="..\TsBlog.Domain\TsBlog.Domain.csproj">
       <Project>{E415AB82-2704-4984-9576-A9BC8F3DED30}</Project>
       <Name>TsBlog.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\src\Libraries\TsBlog.Repositories\TsBlog.Repositories.csproj">
+    <ProjectReference Include="..\TsBlog.Repositories\TsBlog.Repositories.csproj">
       <Project>{0B3D004F-250E-439F-B0AB-9268C33D3DEB}</Project>
       <Name>TsBlog.Repositories</Name>
     </ProjectReference>

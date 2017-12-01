@@ -1,6 +1,5 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
-using DunxPay.Services;
 using System.Web.Mvc;
 using System.Web.Routing;
 using TsBlog.Repositories;

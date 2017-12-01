@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using TsBlog.Domain.Entities;
 
-namespace DunxPay.Services
+namespace TsBlog.Services
 {
     public interface IPostService
     {

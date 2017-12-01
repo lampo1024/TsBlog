@@ -153,10 +153,6 @@
     <Content Include="Views\Home\Post.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\TsBlog.Services\TsBlog.Services.csproj">
-      <Project>{6BCFD47C-B93A-4E6C-8E27-3EF8CCB49D74}</Project>
-      <Name>TsBlog.Services</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Libraries\TsBlog.Domain\TsBlog.Domain.csproj">
       <Project>{E415AB82-2704-4984-9576-A9BC8F3DED30}</Project>
       <Name>TsBlog.Domain</Name>
@@ -164,6 +160,10 @@
     <ProjectReference Include="..\..\Libraries\TsBlog.Repositories\TsBlog.Repositories.csproj">
       <Project>{0B3D004F-250E-439F-B0AB-9268C33D3DEB}</Project>
       <Name>TsBlog.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\TsBlog.Services\TsBlog.Services.csproj">
+      <Project>{6bcfd47c-b93a-4e6c-8e27-3ef8ccb49d74}</Project>
+      <Name>TsBlog.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
