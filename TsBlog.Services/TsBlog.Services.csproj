@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B3D004F-250E-439F-B0AB-9268C33D3DEB}</ProjectGuid>
+    <ProjectGuid>{6BCFD47C-B93A-4E6C-8E27-3EF8CCB49D74}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TsBlog.Repositories</RootNamespace>
-    <AssemblyName>TsBlog.Repositories</AssemblyName>
+    <RootNamespace>TsBlog.Services</RootNamespace>
+    <AssemblyName>TsBlog.Services</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,17 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="MySqlSugar, Version=3.5.3.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\mySqlSugar.3.5.3.4\lib\net40\MySqlSugar.dll</HintPath>
-    </Reference>
-    <Reference Include="SqlSugar, Version=4.6.0.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\sqlSugar.4.6.0.6\lib\SqlSugar.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,27 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config.cs" />
-    <Compile Include="DataConverter.cs" />
-    <Compile Include="DbFactory.cs" />
-    <Compile Include="IPostRepository.cs" />
-    <Compile Include="MySqlHelper.cs" />
-    <Compile Include="PostRepository.cs" />
+    <Compile Include="IPostService.cs" />
+    <Compile Include="PostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TsBlog.Domain\TsBlog.Domain.csproj">
-      <Project>{e415ab82-2704-4984-9576-a9bc8f3ded30}</Project>
+    <ProjectReference Include="..\src\Libraries\TsBlog.Domain\TsBlog.Domain.csproj">
+      <Project>{E415AB82-2704-4984-9576-A9BC8F3DED30}</Project>
       <Name>TsBlog.Domain</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="lib\MySql.Data.dll" />
-    <Content Include="lib\MySqlSugar.dll" />
+    <ProjectReference Include="..\src\Libraries\TsBlog.Repositories\TsBlog.Repositories.csproj">
+      <Project>{0B3D004F-250E-439F-B0AB-9268C33D3DEB}</Project>
+      <Name>TsBlog.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
