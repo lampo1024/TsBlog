@@ -153,6 +153,14 @@
     <Content Include="Views\Home\Post.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\TsBlog.AutoMapperConfig\TsBlog.AutoMapperConfig.csproj">
+      <Project>{2866A0EC-8F66-4CB5-BC70-568EC3397EFB}</Project>
+      <Name>TsBlog.AutoMapperConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TsBlog.ViewModel\TsBlog.ViewModel.csproj">
+      <Project>{459E7C49-DE30-4FFD-8912-FF9ED8069DEB}</Project>
+      <Name>TsBlog.ViewModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Libraries\TsBlog.Domain\TsBlog.Domain.csproj">
       <Project>{E415AB82-2704-4984-9576-A9BC8F3DED30}</Project>
       <Name>TsBlog.Domain</Name>

@@ -1,4 +1,4 @@
-﻿@model TsBlog.Domain.Entities.Post
+﻿@model TsBlog.ViewModel.Post.PostViewModel
 @{
     Layout = null;
 }
@@ -11,9 +11,11 @@
     <title>Post find by id test</title>
 </head>
 <body>
-<div>
-    <p>Post id:@Model.Id</p>
-    <p>Post Title:@Model.Title</p>
-</div>
+    <div>
+        <p>Post id:@Model.Id</p>
+        <p>Post Title:@Model.Title</p>
+        <p>Post PublishedAt:@Model.PublishedAt</p>
+        <p>Post IsDeleted:@Model.IsDeleted</p>
+    </div>
 </body>
 </html>

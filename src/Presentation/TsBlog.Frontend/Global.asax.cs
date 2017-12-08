@@ -2,6 +2,7 @@
 using Autofac.Integration.Mvc;
 using System.Web.Mvc;
 using System.Web.Routing;
+using TsBlog.AutoMapperConfig;
 using TsBlog.Repositories;
 using TsBlog.Services;
 
@@ -17,6 +18,8 @@ namespace TsBlog.Frontend
             //BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             AutofacRegister();
+
+            AutoMapperRegister();
         }
 
         private void AutofacRegister()
@@ -38,6 +41,14 @@ namespace TsBlog.Frontend
 
             //设置依赖注入解析器
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+        }
+
+        /// <summary>
+        /// AutoMapper的配置初始化
+        /// </summary>
+        private void AutoMapperRegister()
+        {
+            new AutoMapperStartupTask().Execute();
         }
     }
 }
