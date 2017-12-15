@@ -22,7 +22,7 @@ namespace TsBlog.Services
         /// </summary>
         /// <param name="entity">博文实体类</param>
         /// <returns></returns>
-        int Insert(Post entity);
+        long Insert(Post entity);
 
         /// <summary>
         /// 更新实体数据

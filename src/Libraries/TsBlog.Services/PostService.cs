@@ -6,8 +6,8 @@ namespace TsBlog.Services
 {
     public class PostService : IPostService
     {
-        private readonly IPostRepository _postRepository;
-        public PostService(IPostRepository postRepository)
+        private readonly IRepository<Post> _postRepository;
+        public PostService(IRepository<Post> postRepository)
         {
             _postRepository = postRepository;
         }
@@ -36,7 +36,7 @@ namespace TsBlog.Services
             return _postRepository.FindById(id);
         }
 
-        public int Insert(Post entity)
+        public long Insert(Post entity)
         {
             return _postRepository.Insert(entity);
         }
