@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.0
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Persentation", "2.Persentation", "{FA8E85B0-9A67-4C64-B336-7DAD8D6833D0}"
 EndProject
@@ -15,9 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TsBlog.Frontend", "src\Pres
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TsBlog.Services", "src\Libraries\TsBlog.Services\TsBlog.Services.csproj", "{6BCFD47C-B93A-4E6C-8E27-3EF8CCB49D74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TsBlog.AutoMapperConfig", "TsBlog.AutoMapperConfig\TsBlog.AutoMapperConfig.csproj", "{2866A0EC-8F66-4CB5-BC70-568EC3397EFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TsBlog.AutoMapperConfig", "src\Libraries\TsBlog.AutoMapperConfig\TsBlog.AutoMapperConfig.csproj", "{2866A0EC-8F66-4CB5-BC70-568EC3397EFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TsBlog.ViewModel", "TsBlog.ViewModel\TsBlog.ViewModel.csproj", "{459E7C49-DE30-4FFD-8912-FF9ED8069DEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TsBlog.ViewModel", "src\Libraries\TsBlog.ViewModel\TsBlog.ViewModel.csproj", "{459E7C49-DE30-4FFD-8912-FF9ED8069DEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

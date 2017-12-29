@@ -53,12 +53,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\Libraries\TsBlog.Domain\TsBlog.Domain.csproj">
+    <ProjectReference Include="..\TsBlog.Domain\TsBlog.Domain.csproj">
       <Project>{e415ab82-2704-4984-9576-a9bc8f3ded30}</Project>
       <Name>TsBlog.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\TsBlog.ViewModel\TsBlog.ViewModel.csproj">
-      <Project>{459e7c49-de30-4ffd-8912-ff9ed8069deb}</Project>
+      <Project>{459E7C49-DE30-4FFD-8912-FF9ED8069DEB}</Project>
       <Name>TsBlog.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
