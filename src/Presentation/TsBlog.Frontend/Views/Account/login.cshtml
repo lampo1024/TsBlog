@@ -1,0 +1,78 @@
+﻿@model TsBlog.ViewModel.User.LoginViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>用户登录</title>
+    <style type="text/css">
+
+        * { box-sizing: border-box; }
+        body { box-sizing: border-box; margin: 0; padding: 0; color: #333; }
+
+        .account-container { position: absolute; margin: auto; top: 0; right: 0; bottom: 0; left: 0; width: 400px; height: 450px; background-color: #fff; /*border-radius: 3px;*/ box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); }
+
+        .account-signin-container { margin-top: 15px; }
+            .account-signin-container h1 { font-size: 20px; border-bottom: 2px solid #f7f7f7; margin: 0 0 15px; padding-bottom: 10px; padding-left: 15px; letter-spacing: 0.1em; }
+        .account-form { padding: 15px; }
+            .account-form .form-group { width: 100%; margin-bottom: 15px; }
+                .account-form .form-group label { width: 100%; display: block; }
+                .account-form .form-group input { border: 1px solid #ccc; line-height: 32px; font-size: 16px; padding: 2px 0px; padding-left: 5px; display: block; width: 100%; margin-top: 5px; }
+            .account-form #btn_login { border: 0; background: #3b78e7; color: #fff; font-size: 18px; font-weight: bold; padding: 8px 25px; cursor: pointer; margin-top: 15px; display: inline-block; box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); border-radius: 3px; min-width: 100px; text-align: center; }
+                .account-form #btn_login:hover { background: #4885F3; }
+        span.error { color: #f00; }
+        .btn-register { float: right; display: block; margin-top: 25px; color: #4885f3; }
+
+        @@media(max-width:500px) {
+            .account-container { width: 100%; height: 100vh; }
+        }
+    </style>
+</head>
+<body>
+    <div class="account-container">
+        <div class="account-modal-container">
+            <div class="modal"></div>
+            <div class="load-bar-container">
+                <div class="load-bar">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <div class="account-signin-container">
+                <h1>用户登录</h1>
+                @using (Html.BeginForm("login", "account", FormMethod.Post, new { @class = "account-form", role = "form" }))
+                {
+                    @Html.ValidationMessage("error_message", new { @class = "error" })
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        <label>
+                            <span>登录名:</span>
+                            @Html.TextBoxFor(m => m.UserName, new { placeholder = "请输入登录名" })
+                            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "error" })
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <span>密码:</span>
+                            @Html.PasswordFor(m => m.Password, new { placeholder = "请输入密码" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "error" })
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <button id="btn_login" type="submit">登 录</button>
+                        <a class="btn-register" href="~/account/register">注册账号</a>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/res/assets/notie/notie.min.js"></script>
+</body>
+</html>

@@ -42,16 +42,6 @@ namespace TsBlog.Frontend
                 )
                 .AsImplementedInterfaces()
                 .InstancePerDependency();
-            //builder.RegisterGeneric(typeof(GenericRepository<>))
-            //    .As(typeof(IRepository<>));
-            //builder.RegisterGeneric(typeof(GenericService<>))
-            //    .As(typeof(IService<>));
-
-            //builder.RegisterGeneric(typeof(GenericRepository<>));
-            //builder.RegisterGeneric(typeof(GenericService<>));
-
-            //注册服务层服务
-            //builder.RegisterType<PostService>().As<IPostService>();
 
             //注册过滤器
             builder.RegisterFilterProvider();

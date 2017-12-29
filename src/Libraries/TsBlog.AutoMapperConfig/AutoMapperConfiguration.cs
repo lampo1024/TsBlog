@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using TsBlog.Domain.Entities;
 using TsBlog.ViewModel.Post;
+using TsBlog.ViewModel.User;
 
 namespace TsBlog.AutoMapperConfig
 {
@@ -21,6 +22,12 @@ namespace TsBlog.AutoMapperConfig
                 ;
                 //将视图实体映射到领域实体
                 cfg.CreateMap<PostViewModel, Post>();
+                #endregion
+
+                #region User
+
+                cfg.CreateMap<User, UserViewModel>();
+                cfg.CreateMap<UserViewModel, User>();
                 #endregion
             });
 

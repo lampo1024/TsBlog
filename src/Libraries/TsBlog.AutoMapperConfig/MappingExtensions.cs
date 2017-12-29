@@ -1,5 +1,6 @@
 ﻿using TsBlog.Domain.Entities;
 using TsBlog.ViewModel.Post;
+using TsBlog.ViewModel.User;
 
 namespace TsBlog.AutoMapperConfig
 {
@@ -31,5 +32,18 @@ namespace TsBlog.AutoMapperConfig
 
         #endregion
 
+        #region User
+        public static UserViewModel ToModel(this User entity)
+        {
+            return entity.MapTo<User, UserViewModel>();
+        }
+
+        public static User ToEntity(this UserViewModel model)
+        {
+            return model.MapTo<UserViewModel, User>();
+        }
+
+        #endregion
+
     }
-} 
+}

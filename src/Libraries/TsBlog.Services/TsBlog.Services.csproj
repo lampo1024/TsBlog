@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GenericService.cs" />
+    <Compile Include="IUserService.cs" />
     <Compile Include="IPostService.cs" />
     <Compile Include="IService.cs" />
+    <Compile Include="UserService.cs" />
     <Compile Include="PostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -2,7 +2,7 @@
 
 namespace TsBlog.Repositories
 {
-    public interface IPostRepository : IRepository<Post>
+    public interface IUserRepository : IRepository<User>
     {
 
     }

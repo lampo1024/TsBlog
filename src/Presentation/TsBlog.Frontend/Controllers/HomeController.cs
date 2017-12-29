@@ -13,14 +13,21 @@ namespace TsBlog.Frontend.Controllers
         }
         public ActionResult Index()
         {
+            //如果未登录，则跳转到登录页面
+            if (Session["user_account"] == null)
+            {
+                return RedirectToAction("login", "account");
+            }
             return View();
         }
 
         public ActionResult Post()
         {
-            //var postRepository = new PostRepository();
-            //var post = postRepository.FindById(1);
-            //return View(post);
+            //如果未登录，则跳转到登录页面
+            if (Session["user_account"] == null)
+            {
+                return RedirectToAction("login", "account");
+            }
 
             var post = _postService.FindById(1).ToModel();
             return View(post);

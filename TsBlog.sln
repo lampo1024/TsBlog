@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TsBlog.AutoMapperConfig", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TsBlog.ViewModel", "src\Libraries\TsBlog.ViewModel\TsBlog.ViewModel.csproj", "{459E7C49-DE30-4FFD-8912-FF9ED8069DEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TsBlog.Core", "src\Libraries\TsBlog.Core\TsBlog.Core.csproj", "{0A171809-BF68-4AD5-A3D2-D4638149E95C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{459E7C49-DE30-4FFD-8912-FF9ED8069DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{459E7C49-DE30-4FFD-8912-FF9ED8069DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{459E7C49-DE30-4FFD-8912-FF9ED8069DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A171809-BF68-4AD5-A3D2-D4638149E95C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A171809-BF68-4AD5-A3D2-D4638149E95C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A171809-BF68-4AD5-A3D2-D4638149E95C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A171809-BF68-4AD5-A3D2-D4638149E95C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{6BCFD47C-B93A-4E6C-8E27-3EF8CCB49D74} = {EC3F3ECF-1C39-46B1-9379-13CE519A2BE9}
 		{2866A0EC-8F66-4CB5-BC70-568EC3397EFB} = {EC3F3ECF-1C39-46B1-9379-13CE519A2BE9}
 		{459E7C49-DE30-4FFD-8912-FF9ED8069DEB} = {EC3F3ECF-1C39-46B1-9379-13CE519A2BE9}
+		{0A171809-BF68-4AD5-A3D2-D4638149E95C} = {EC3F3ECF-1C39-46B1-9379-13CE519A2BE9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C238B374-A804-4D90-9C62-E56EC977BA8B}
