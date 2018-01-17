@@ -28,7 +28,7 @@ namespace TsBlog.Repositories
         /// <param name="predicate">条件表达式树</param>
         /// <param name="orderBy">排序</param>
         /// <returns>泛型实体集合</returns>
-        IEnumerable<T> FindListByClause(Expression<Func<T, bool>> predicate, string orderBy);
+        IEnumerable<T> FindListByClause(Expression<Func<T, bool>> predicate, string orderBy = "");
 
         /// <summary>
         /// 根据条件查询数据

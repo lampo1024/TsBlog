@@ -1,29 +1,30 @@
-﻿using System.Linq;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using TsBlog.AutoMapperConfig;
-using TsBlog.Frontend.Extensions;
 using TsBlog.Services;
 
 namespace TsBlog.Frontend.Controllers
 {
-    public class HomeController : Controller
+    public class PostController : Controller
     {
         /// <summary>
         /// 文章服务接口
         /// </summary>
         private readonly IPostService _postService;
-        public HomeController(IPostService postService)
+
+        public PostController(IPostService postService)
         {
             _postService = postService;
         }
+
         /// <summary>
-        /// 首页
+        /// 文章详情
         /// </summary>
+        /// <param name="id">文章ID</param>
         /// <returns></returns>
-        public ActionResult Index()
+        public ActionResult Details(int id)
         {
-            var list = _postService.FindHomePagePosts();
-            var model = list.Select(x => x.ToModel().FormatPostViewModel());
+            var post = _postService.FindById(id);
+            var model = post.ToModel();
             return View(model);
         }
     }

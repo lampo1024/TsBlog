@@ -41,11 +41,16 @@ namespace TsBlog.Repositories
         /// <param name="predicate">条件表达式树</param>
         /// <param name="orderBy">排序</param>
         /// <returns>泛型实体集合</returns>
-        public IEnumerable<T> FindListByClause(Expression<Func<T, bool>> predicate, string orderBy)
+        public IEnumerable<T> FindListByClause(Expression<Func<T, bool>> predicate, string orderBy = "")
         {
             using (var db = DbFactory.GetSqlSugarClient())
             {
-                var entities = db.Queryable<T>().Where(predicate).ToList();
+                var query = db.Queryable<T>().Where(predicate);
+                if (!string.IsNullOrEmpty(orderBy))
+                {
+                    query = query.OrderBy(orderBy);
+                }
+                var entities = query.ToList();
                 return entities;
             }
         }
@@ -149,7 +154,6 @@ namespace TsBlog.Repositories
                 return i > 0;
             }
         }
-
         #endregion
     }
 }

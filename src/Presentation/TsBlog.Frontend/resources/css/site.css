@@ -1,0 +1,62 @@
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td { border: 0; margin: 0; padding: 0; }
+
+body { color: #333; font-size: 14px; font-family: -apple-system,'helvetica neue', helvetica,"Helvetica Neue",Helvetica,Arial,"PingFang SC","Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft Yahei",sans-serif; line-height: 22px; width: 100%; height: 100%; }
+h1, h2, h3, h4, h5, h6 { clear: both; font-weight: normal; }
+ol, ul { list-style: none; }
+blockquote { quotes: none; border-left: 5px solid #eee; font-size: 14px; margin: 10px 0; padding: 10px 20px; }
+    blockquote:before, blockquote:after { content: ''; content: none; }
+
+a { color: #4484ce; }
+
+/*bootstrap override*/
+.btn { border-radius: 2px !important; }
+.btn-primary { background-color: #4484CE !important; }
+    .btn-primary:hover { background-color: #3A77BE !important; }
+
+.navbar-nav a { color: #333 !important; }
+    .navbar-nav > .active > a, .navbar-nav > .active > a:focus, .navbar-nav > .active > a:hover, .navbar-nav a:hover { border-radius: 2px; background-color: #e7e7e7 !important; }
+/*site begin*/
+.ts-navbar .navbar-nav { height: 50px; vertical-align: middle; line-height: 50px; }
+    .ts-navbar .navbar-nav li { vertical-align: middle; line-height: 50px; float: none; display: inline-block; }
+.ts-navbar .dropdown li { display: block; }
+.ts-navbar .navbar-nav li a { padding: 8px 15px; }
+.navbar-brand { height: auto; }
+a.nav-btn-login { color: #fff !important; }
+    a.nav-btn-login:hover { background-color: #3A77BE !important; color: #fff !important; }
+.navbar-profile { margin-right: 0; }
+/*home begin*/
+.jumbotron h1 { margin-bottom: 15px; }
+.jumbotron p { line-height: 28px; }
+.post-title { display: block; font-size: 16px; font-weight: 600; border-bottom: 2px solid #e7e7e7; padding-bottom: 8px; }
+.post-item-box { margin-bottom: 15px; }
+    .post-item-box li { margin-top: 15px; margin-bottom: 15px; padding-top: 10px; padding-bottom: 10px; }
+        .post-item-box li h2 { font-size: 16px; font-weight: 500; margin-bottom: 10px; }
+.post-item-summary { color: #555; }
+.footer-box { padding: 15px; margin-top: 15px; border-top: 1px solid #e7e7e7; }
+
+
+/*post details*/
+
+.article-content { padding-top: 15px; padding-bottom: 15px; }
+    .article-content p { margin-top: 20px; margin-bottom: 20px; }
+.article-fixed p { margin-top: 0; margin-bottom: 5px; }
+.article-content h1, .article-content h2, .article-content h3, .article-content h4, .article-content h5, .article-content h6 { margin: 15px 0 10px; }
+.article-content h1, .article-content h2 { border-bottom: 1px solid #eee; padding-bottom: 10px; }
+.article-content h2 { font-size: 1.75em; line-height: 1.2 }
+.article-content h3 { font-size: 1.5em; line-height: 1.2 }
+.article-content blockquote { background: #f6f6f6 none repeat scroll 0 0; border-left: 2px solid #009a61; color: #555; font-size: 1em; }
+.cloud-tags .cloud-tag-item { border: 1px solid #efefef; background-color: #f7f7f7; padding: 5px 10px; }
+.cloud-tags .cloud-tag-item, .side-bar-article-list, .article-content { word-break: break-all; word-wrap: break-word; white-space: normal; }
+    .article-content pre { background-attachment: scroll; background-clip: border-box; background-color: #f6f6f6; border: medium none; line-height: 1.45; max-height: 35em; overflow: auto; padding: 1em; position: relative; margin-bottom: 15px; margin-top: 15px; }
+    .article-content ul li { padding-left: 15px; list-style: inside; }
+    .article-content ul li { padding-left: 15px; list-style: inside; }
+    .article-content ul, .article-content ol { margin-left: 3em; padding-left: 0; }
+        .article-content ul li, .article-content ol li { margin: .3em 0; }

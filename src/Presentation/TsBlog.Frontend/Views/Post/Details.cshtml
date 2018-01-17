@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TsBlog.ViewModel.Post.PostViewModel>
+﻿@model TsBlog.ViewModel.Post.PostViewModel
 @{
     Layout = null;
 }
@@ -7,10 +7,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ASP.NET MVC 5 系列文章教程--首页 | TSBLOG</title>
+    <title>@(Model.Title) | TSBLOG</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/resources/css/site.css" rel="stylesheet" />
-
 </head>
 <body>
     <nav class="navbar navbar-default navbar-static-top ts-navbar">
@@ -22,11 +21,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="~/">TSBLOG</a>
+                <a class="navbar-brand" href="~/">网站名称</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="~/">网站首页</a></li>
+                    <li><a href="~/">网站首页</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">分类导航 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -51,27 +50,14 @@
                     <li><a href="~/account/register">免费注册</a></li>
                     <li><a class="btn btn-primary nav-btn-login" href="~/account/login">立即登录</a></li>
                 </ul>
-            </div><!--/.nav-collapse -->
+            </div>
         </div>
     </nav>
     <div class="container">
-        <div class="jumbotron">
-            <h1>小伙伴，你好</h1>
-            <p>欢迎来到 Rector 的ASP.NET MVC 5 系列文章教程。在这里，Rector将和你一起一步一步创建一个集成Repository+Autofac+Automapper+SqlSugar的WEB应用程序。</p>
-            <p>你准备好了吗？</p>
-            <p>......</p>
-            <p>让我们开始ASP.NET MVC 5 应用程序的探索之旅吧!!!</p>
-        </div>
-        <strong class="post-title">文章列表(@(Model.Count())篇)</strong>
-        <ul class="list-unstyled post-item-box">
-            @foreach (var p in Model)
-            {
-                <li>
-                    <h2><a href="~/post/details/@p.Id">@p.Title</a></h2>
-                    <p class="post-item-summary">@p.Summary ... <a href="~/post/details/@p.Id">阅读全文</a></p>
-                </li>
-            }
-        </ul>
+        <h1 class="post-title">@Model.Title</h1>
+        <article class="article-content">
+            @Html.Raw(Model.Content)
+        </article>
     </div>
     <footer class="footer-box">
         <div class="container">

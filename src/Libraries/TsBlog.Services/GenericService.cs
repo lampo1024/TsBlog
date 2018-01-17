@@ -39,7 +39,7 @@ namespace TsBlog.Services
         /// <param name="predicate">条件表达式树</param>
         /// <param name="orderBy">排序</param>
         /// <returns>泛型实体集合</returns>
-        public IEnumerable<T> FindListByClause(Expression<Func<T, bool>> predicate, string orderBy)
+        public IEnumerable<T> FindListByClause(Expression<Func<T, bool>> predicate, string orderBy = "")
         {
             return _repository.FindListByClause(predicate, orderBy);
         }
@@ -71,7 +71,7 @@ namespace TsBlog.Services
         /// <returns></returns>
         public bool Update(T entity)
         {
-            return _repository.Update(entity);  
+            return _repository.Update(entity);
         }
 
         /// <summary>
@@ -113,6 +113,5 @@ namespace TsBlog.Services
         {
             return _repository.DeleteByIds(ids);
         }
-
     }
 }

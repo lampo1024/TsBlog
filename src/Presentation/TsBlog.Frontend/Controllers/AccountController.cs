@@ -62,7 +62,7 @@ namespace TsBlog.Frontend.Controllers
                 return View(model);
             }
 
-            //并用户实体保存到Session中
+            //将用户实体保存到Session中
             Session["user_account"] = user;
             //跳转到首页
             return RedirectToAction("index", "home");
@@ -111,6 +111,13 @@ namespace TsBlog.Frontend.Controllers
             }
             //如果注册成功,则跳转到登录页面
             return RedirectToAction("login");
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            Session.Abandon();
+            return RedirectToAction("index", "home");
         }
     }
 }

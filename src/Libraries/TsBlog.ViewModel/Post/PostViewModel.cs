@@ -45,5 +45,10 @@
         /// 浏览量
         /// </summary>
         public int ViewCount { get; set; }
+
+        /// <summary>
+        /// 摘要
+        /// </summary>
+        public string Summary { get; set; }
     }
 }
