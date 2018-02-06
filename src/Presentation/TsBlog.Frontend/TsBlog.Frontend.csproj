@@ -152,6 +152,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\register.cshtml" />
     <Content Include="Views\Post\Details.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

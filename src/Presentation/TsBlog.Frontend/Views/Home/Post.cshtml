@@ -1,21 +1,11 @@
 ﻿@model TsBlog.ViewModel.Post.PostViewModel
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = Model.Title;
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Post find by id test</title>
-</head>
-<body>
-    <div>
-        <p>Post id:@Model.Id</p>
-        <p>Post Title:@Model.Title</p>
-        <p>Post PublishedAt:@Model.PublishedAt</p>
-        <p>Post IsDeleted:@Model.IsDeleted</p>
-    </div>
-</body>
-</html>
+<article>
+    <p>Post id:@Model.Id</p>
+    <p>Post Title:@Model.Title</p>
+    <p>Post PublishedAt:@Model.PublishedAt</p>
+    <p>Post IsDeleted:@Model.IsDeleted</p>
+</article>
