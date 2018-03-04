@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using TsBlog.Repositories;
 
 namespace TsBlog.Services
 {
@@ -79,5 +80,15 @@ namespace TsBlog.Services
         /// <param name="ids"></param>
         /// <returns></returns>
         bool DeleteByIds(object[] ids);
+
+        /// <summary>
+        /// 根据条件查询分页数据
+        /// </summary>
+        /// <param name="predicate"></param>
+        /// <param name="orderBy"></param>
+        /// <param name="pageIndex">当前页面索引</param>
+        /// <param name="pageSize">分布大小</param>
+        /// <returns></returns>
+        IPagedList<T> FindPagedList(Expression<Func<T, bool>> predicate, string orderBy = "", int pageIndex = 1, int pageSize = 20);
     }
 }

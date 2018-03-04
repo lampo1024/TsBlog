@@ -1,4 +1,6 @@
-﻿@model IEnumerable<TsBlog.ViewModel.Post.PostViewModel>
+﻿@using PagedList
+@using PagedList.Mvc
+@model IEnumerable<TsBlog.ViewModel.Post.PostViewModel>
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "ASP.NET MVC 5 系列文章教程--首页";
@@ -20,3 +22,14 @@
         </li>
     }
 </ul>
+@Html.PagedListPager((IPagedList)ViewBag.Pagination, page => Url.Action("index", new { page }), new PagedListRenderOptions
+{
+    LinkToFirstPageFormat = "首页",
+    LinkToPreviousPageFormat = "上一页",
+    LinkToNextPageFormat = "下一页",
+    LinkToLastPageFormat = "末页",
+    DisplayLinkToFirstPage = PagedListDisplayMode.IfNeeded,
+    DisplayLinkToLastPage = PagedListDisplayMode.Never,
+    DisplayEllipsesWhenNotShowingAllPageNumbers = true,
+    MaximumPageNumbersToDisplay = 5
+})
