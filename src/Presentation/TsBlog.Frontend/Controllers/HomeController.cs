@@ -26,7 +26,7 @@ namespace TsBlog.Frontend.Controllers
         {
             //var list = _postService.FindHomePagePosts();
             //读取分页数据,返回IPagedList<Post>
-            page = page ?? 0;
+            page = page ?? 1;
             var list = _postService.FindPagedList(x => !x.IsDeleted && x.AllowShow, pageIndex: (int)page, pageSize: 10);
             var model = list.Select(x => x.ToModel().FormatPostViewModel());
             ViewBag.Pagination = new StaticPagedList<PostViewModel>(model, list.PageIndex, list.PageSize, list.TotalCount);
