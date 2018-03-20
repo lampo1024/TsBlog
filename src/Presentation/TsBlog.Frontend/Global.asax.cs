@@ -1,8 +1,9 @@
 ﻿using Autofac;
 using Autofac.Features.ResolveAnything;
 using Autofac.Integration.Mvc;
-using System;
 using System.Linq;
+using System.Reflection;
+using System.Web.Compilation;
 using System.Web.Mvc;
 using System.Web.Routing;
 using TsBlog.AutoMapperConfig;
@@ -31,15 +32,30 @@ namespace TsBlog.Frontend
             //注册MvcApplication程序集中所有的控制器
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
+            ////注册仓储层服务
+            ////builder.RegisterType<PostRepository>().As<IPostRepository>();
+            ////注册基于接口约束的实体
+            //var assembly = AppDomain.CurrentDomain.GetAssemblies();
+            //builder.RegisterAssemblyTypes(assembly)
+            //    .Where(
+            //        t => t.GetInterfaces()
+            //            .Any(i => i.IsAssignableFrom(typeof(IDependency)))
+            //    )
+            //    .AsImplementedInterfaces()
+            //    .InstancePerDependency();
+
             //注册仓储层服务
             //builder.RegisterType<PostRepository>().As<IPostRepository>();
             //注册基于接口约束的实体
-            var assembly = AppDomain.CurrentDomain.GetAssemblies();
-            builder.RegisterAssemblyTypes(assembly)
+            //var assembly = AppDomain.CurrentDomain.GetAssemblies();
+            var assemblies = BuildManager.GetReferencedAssemblies().Cast<Assembly>()
                 .Where(
-                    t => t.GetInterfaces()
-                        .Any(i => i.IsAssignableFrom(typeof(IDependency)))
-                )
+                    assembly =>
+                        assembly.GetTypes().FirstOrDefault(type => type.GetInterfaces().Contains(typeof(IDependency))) !=
+                        null
+                );
+
+            builder.RegisterAssemblyTypes(assemblies.ToArray())
                 .AsImplementedInterfaces()
                 .InstancePerDependency();
 
