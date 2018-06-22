@@ -7,4 +7,4 @@
 
 如果你在学习或者查看源码时遇到什么问题，或有意见/建议，欢迎加入我们的QQ交流群：483350228
 
-[1]: https://2sharings.com/t/EdVp8xCk
+[1]: https://codedefault.com/t/EdVp8xCk
