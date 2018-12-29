@@ -1,5 +1,5 @@
 # TsBlog
-**TsBlog**是一个基于ASP.NET MVC 5+Repository+Autofac+AutoMapper+SqlSugar的博客系统。旨在帮助.NET开发者快速地提升ASP.NET MVC项目的开发效率和开发技巧。
+**TsBlog**是一个基于ASP.NET MVC 5+Repository+Autofac+AutoMapper+SqlSugar的系列教程。旨在帮助.NET开发者快速地提升ASP.NET MVC项目的开发效率和开发技巧。
 
 本项目由基础到框架，通过实战项目中的设计，封装以及重构，让.NET开发者们可以直观地感受ASP.NET MVC 5+Repository+Autofac+AutoMapper+SqlSugar的整个开流程和细节。
 
