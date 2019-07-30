@@ -260,3 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 /TsBlog.Frontend/Properties/PublishProfiles
+
+/Scripts/
